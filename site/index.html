@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sky Mirror SM-150</title>
+<meta name="description" content="Sky Mirror SM-150/750: a 150 mm carbon-truss reflector telescope you build by hand with no tools. Explore the design in 3D.">
+<meta name="theme-color" content="#05070b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sky Mirror SM-150 — the 150 mm telescope you build by hand">
+<meta property="og:description" content="A carbon-truss reflector that goes together with hand knobs. No tools, no glue. Explore it in 3D.">
+<meta property="og:image" content="https://skymirrors.de/assets/img/og.jpg">
+<meta property="og:url" content="https://skymirrors.de/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://skymirrors.de/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/saira-semi-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="importmap">
+{ "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/": "./assets/vendor/three/addons/" } }
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Sky Mirror home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="#8fb6cc" stroke-width="1.4"/><path d="M7.5 20.5 Q16 27.5 24.5 20.5" fill="none" stroke="#e9e6df" stroke-width="2" stroke-linecap="round"/><path d="M10 7 L16 12.2 M22 7 L16 12.2 M16 4.5 L16 12.2" stroke="#8fb6cc" stroke-width="1" stroke-linecap="round" opacity=".7"/><circle cx="16" cy="12.6" r="1.9" fill="#c4e4f7"/></svg>
+      <span>Sky Mirror</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#optics">Telescope</a></li>
+      <li><a href="#build">Build</a></li>
+      <li><a href="#phone">Phone photos</a></li>
+      <li><a href="#views">What you'll see</a></li>
+      <li><a href="#specs">Specs</a></li>
+      <li><a href="explore.html">3D explorer</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary btn-nav" href="#notify">Get notified</a>
+  </div>
+</header>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="sky-glow" aria-hidden="true"></div>
+<div class="stage" id="stage" aria-hidden="true">
+  <canvas id="scope"></canvas>
+  <div class="stage-poster" style="background-image:url('assets/img/poster.webp')"></div>
+  <div class="stage-status" id="stage-status"><span>Loading 3D model</span><span class="bar"><i id="stage-bar"></i></span></div>
+</div>
+
+<main id="main">
+  <div class="story" id="story">
+
+    <section class="hero" data-chapter="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">Sky Mirror SM-150/750 · in development</p>
+        <h1>The 150&nbsp;mm telescope you build by hand</h1>
+        <p class="lead">A carbon-truss reflector that arrives in modules and goes together with hand knobs. No tools, no glue. Clip on your phone and photograph the Moon the same night.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#notify">Get notified at launch</a>
+          <a class="btn btn-ghost" href="explore.html">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 14 5v6l-6 3.5L2 11V5z M2 5l6 3.5L14 5 M8 8.5V14.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            Explore in 3D
+          </a>
+        </div>
+        <div class="tube-label">
+          <span class="engrave">SKY MIRROR</span>
+          <span class="engrave">D=150mm F=750mm</span>
+          <span class="engrave">f/5</span>
+        </div>
+        <div class="figures" aria-label="Key figures">
+          <div><b class="num">150<small>mm</small></b><span>mirror, 459× the light your eye collects</span></div>
+          <div><b class="num">5.0<small>kg</small></b><span>complete, tube and mount</span></div>
+          <div><b class="num">23</b><span>hand knobs, zero tools</span></div>
+          <div><b class="num">30–188<small>×</small></b><span>with the three eyepieces in the box</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" data-chapter="optics" id="optics">
+      <div class="wrap">
+        <div class="card">
+          <p class="eyebrow">Optics</p>
+          <h2>A parabolic 150&nbsp;mm mirror at f/5</h2>
+          <p>The primary mirror is a 150&nbsp;mm parabola with a 750&nbsp;mm focal length. Light runs 610&nbsp;mm up the truss to a 35&nbsp;×&nbsp;49.5&nbsp;mm flat, then 140&nbsp;mm out to focus at the eyepiece.</p>
+          <p>The mirror floats on three silicone pads in a kinematic cell: one cone, one vee, one flat. Three knobs at the back collimate it in steps of <strong>2.52 arc minutes per click</strong>.</p>
+          <div class="readout"><span><b>M1→M2</b>610 mm</span><span><b>M2→focus</b>140 mm</span><span><b>sum</b>750 mm</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" data-chapter="truss" id="truss">
+      <div class="wrap">
+        <div class="card">
+          <p class="eyebrow">Truss</p>
+          <h2>Six carbon tubes instead of a tube</h2>
+          <p>Six pultruded carbon tubes, 12&nbsp;mm across, hold the cage over the mirror. They push into numbered sockets on the mirror box and clamp with twelve finger knobs that press on bonded aluminium end plugs, never on the carbon.</p>
+          <p>The cage carries the matching labels 1-2, 2-3 and 3-1. <strong>It only fits one way</strong>, so the optics come back into line every time you set up.</p>
+          <div class="readout"><span><b>tubes</b>6 × Ø12 × 1 mm carbon</span><span><b>length</b>616 mm</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" data-chapter="mount" id="mount">
+      <div class="wrap">
+        <div class="card">
+          <p class="eyebrow">Mount</p>
+          <h2>A fork that holds any angle</h2>
+          <p>The tube drops onto two steel axles in a one-piece fork and lifts straight out again. One knob sets the altitude brake from 0.4 to 1.5&nbsp;N·m, so the tube stays where you point it, eyepiece or phone.</p>
+          <p>The fork turns on a thin-section ball bearing with a 100&nbsp;mm bore. Three legs slide onto dovetails and lock with one knob each.</p>
+          <div class="readout"><span><b>altitude axis</b>322 mm above ground</span><span><b>bearing</b>61820</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" data-chapter="box" id="box">
+      <div class="wrap">
+        <div class="card">
+          <p class="eyebrow">In the box</p>
+          <h2>221 parts in the design. Fourteen pieces in your hands.</h2>
+          <p>Collimation, the secondary mirror and the brake cartridges are set at our bench. You receive ready modules: the base, three legs, two fork arms, the mirror box, the cage and six carbon tubes.</p>
+          <p><a class="btn btn-ghost" href="explore.html">Open every part in the 3D explorer</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="build" data-chapter="build" id="build" style="height: 640svh">
+      <div class="build-pin">
+        <div class="wrap">
+          <div class="card" aria-live="polite">
+            <p class="eyebrow">Build it</p>
+            <div class="count"><b class="num" id="b-num">1<small>/ 9</small></b><span class="label" id="b-label">Scroll to assemble</span></div>
+            <p class="step-title" id="b-title">Legs onto the hub</p>
+            <p class="step-text" id="b-text">Slide each leg onto its dovetail on the hub and turn its knob down. The knob tip drops into a dimple and pulls the leg tight.</p>
+            <div class="ticks" id="b-ticks" role="group" aria-label="Assembly steps"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" data-chapter="phone" id="phone">
+      <div class="wrap">
+        <div class="card">
+          <p class="eyebrow">Phone photography</p>
+          <h2>Photograph the Moon with the phone in your pocket</h2>
+          <p>Each eyepiece keeps a slim magnet ring. Your phone sits on a pivot plate by its magnetic back; turn the plate to the lens you want, and the carriage snaps onto the eyepiece, centred by six magnet pairs.</p>
+          <p>A phone adds weight at the top end, so the whole tube slides up to 40&nbsp;mm toward the mirror to balance it. <strong>37&nbsp;mm balances a 220&nbsp;g phone.</strong></p>
+          <div class="readout"><span><b>fits</b>iPhone 12 and later with MagSafe</span><span><b>others</b>with a magnetic sticker ring</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="solid section" id="views">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What you'll see</p>
+        <h2>From the whole Moon to the rings of Saturn</h2>
+        <p>Three Plössl eyepieces and a 2× Barlow lens give you six magnifications. Pick an eyepiece to see how much sky it shows.</p>
+      </div>
+      <div class="views-grid">
+        <div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Eyepiece</th><th scope="col" class="n">Power</th><th scope="col" class="n">True field</th><th scope="col" class="n">Exit pupil</th></tr></thead>
+              <tbody>
+                <tr><td>25 mm<span class="sub">Wide views, the full Moon, star clusters</span></td><td class="n">30×</td><td class="n">1.67°</td><td class="n">5.0 mm</td></tr>
+                <tr><td>25 mm + 2× Barlow</td><td class="n">60×</td><td class="n">0.83°</td><td class="n">2.5 mm</td></tr>
+                <tr><td>10 mm<span class="sub">Planets, craters, the Orion Nebula</span></td><td class="n">75×</td><td class="n">0.67°</td><td class="n">2.0 mm</td></tr>
+                <tr><td>10 mm + 2× Barlow</td><td class="n">150×</td><td class="n">0.33°</td><td class="n">1.0 mm</td></tr>
+                <tr><td>4 mm<span class="sub">Saturn's rings, close double stars</span></td><td class="n">188×</td><td class="n">0.27°</td><td class="n">0.8 mm</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="targets">
+            <li><b>The Moon</b><span>Craters down to a few kilometres along the terminator</span></li>
+            <li><b>Jupiter</b><span>Cloud belts and the four Galilean moons</span></li>
+            <li><b>Saturn</b><span>The rings and the gap between ring and planet</span></li>
+            <li><b>Deep sky</b><span>Orion Nebula, the Pleiades, globular clusters</span></li>
+          </ul>
+          <p class="note">Power = 750 mm ÷ eyepiece focal length. True field assumes a 50° apparent field. 4 mm with the Barlow (375×) is above the useful limit of about 300× for a 150 mm mirror.</p>
+        </div>
+        <div class="fov">
+          <figure>
+            <canvas id="fov" width="600" height="600" role="img" aria-label="Eyepiece field of view with the full Moon drawn to scale"></canvas>
+            <div class="seg" id="fov-seg" role="group" aria-label="Choose an eyepiece">
+              <button type="button" data-f="25" aria-pressed="true">25 mm · 30×</button>
+              <button type="button" data-f="10" aria-pressed="false">10 mm · 75×</button>
+              <button type="button" data-f="4" aria-pressed="false">4 mm · 188×</button>
+            </div>
+            <figcaption id="fov-cap">25 mm eyepiece: a 1.67° circle of sky. The full Moon, 0.52° across, fits about three times.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solid section paper" id="specs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Specifications</p>
+        <h2>The numbers, from the design model</h2>
+        <p>Every figure here comes from the current Fusion model, version 5. The production telescope may differ in detail.</p>
+      </div>
+      <div class="spec-grid">
+        <section>
+          <h3>Optics</h3>
+          <dl>
+            <div><dt>Design</dt><dd>Newtonian reflector</dd></div>
+            <div><dt>Aperture</dt><dd>150 mm</dd></div>
+            <div><dt>Focal length</dt><dd>750 mm</dd></div>
+            <div><dt>Focal ratio</dt><dd>f/5</dd></div>
+            <div><dt>Primary mirror</dt><dd>parabolic, aluminium coated</dd></div>
+            <div><dt>Secondary mirror</dt><dd>35 × 49.5 mm flat</dd></div>
+            <div><dt>Central obstruction</dt><dd>23 % of diameter</dd></div>
+            <div><dt>Resolving power</dt><dd>0.77″ (Dawes)</dd></div>
+            <div><dt>Limiting magnitude</dt><dd>≈ 13</dd></div>
+          </dl>
+        </section>
+        <section>
+          <h3>Mechanics</h3>
+          <dl>
+            <div><dt>Mount</dt><dd>alt-az fork</dd></div>
+            <div><dt>Truss</dt><dd>6 × carbon Ø12 × 1 mm</dd></div>
+            <div><dt>Focuser</dt><dd>helical 1.25″, 2.78 µm/°</dd></div>
+            <div><dt>Primary collimation</dt><dd>3 knobs, 2.52′/click</dd></div>
+            <div><dt>Secondary tilt</dt><dd>3 thumbwheels, 7.96′/click</dd></div>
+            <div><dt>Altitude brake</dt><dd>0.4–1.5 N·m</dd></div>
+            <div><dt>Azimuth bearing</dt><dd>61820 thin-section</dd></div>
+            <div><dt>Altitude axis height</dt><dd>322 mm</dd></div>
+            <div><dt>Phone balance travel</dt><dd>40 mm</dd></div>
+          </dl>
+        </section>
+        <section>
+          <h3>Weight and build</h3>
+          <dl>
+            <div><dt>Complete telescope</dt><dd>5.0 kg</dd></div>
+            <div><dt>Tube with eyepiece</dt><dd>2.96 kg</dd></div>
+            <div><dt>Mount</dt><dd>2.05 kg</dd></div>
+            <div><dt>Phone kit</dt><dd>28 g</dd></div>
+            <div><dt>Hand knobs</dt><dd>23</dd></div>
+            <div><dt>Tools needed</dt><dd>none</dd></div>
+            <div><dt>Structure</dt><dd>carbon-fibre PETG</dd></div>
+            <div><dt>Colours</dt><dd>Black, Titan Gray</dd></div>
+            <div><dt>Parts in the design</dt><dd>221</dd></div>
+          </dl>
+        </section>
+      </div>
+      <div class="box-list">
+        <h3>Planned box contents</h3>
+        <ul>
+          <li><b>1×</b>Base with turntable</li>
+          <li><b>3×</b>Legs</li>
+          <li><b>2×</b>Fork arms</li>
+          <li><b>1×</b>Mirror box with primary mirror</li>
+          <li><b>6×</b>Carbon truss tubes</li>
+          <li><b>1×</b>Cage with secondary and focuser</li>
+          <li><b>3×</b>Plössl eyepieces, 4 / 10 / 25 mm</li>
+          <li><b>1×</b>2× Barlow lens</li>
+          <li><b>1×</b>Phone kit: magnet rings, pivot plate</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="solid section" id="status">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where we are</p>
+        <h2>Designed in Germany, one version at a time</h2>
+        <p>The optics are fixed and the mechanical design is in its fifth version. The first telescope gets printed and tested under the sky next.</p>
+      </div>
+      <ol class="status-line">
+        <li class="done"><span class="when">Done</span><h3>Optical design</h3><p>150 mm f/5 layout frozen: 610 + 140 = 750 mm.</p></li>
+        <li class="now"><span class="when">Now · Oct 2026</span><h3>Mechanical design</h3><p>Version 5 in Fusion: kit mount, sliding balance, magnetic phone adapter.</p></li>
+        <li><span class="when">Next</span><h3>Prototype and first light</h3><p>Print, assemble and test the first telescope under a real sky.</p></li>
+        <li><span class="when">Then</span><h3>Pre-orders</h3><p>Price and delivery dates go to the sign-up list first.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="solid section" id="notify">
+    <div class="wrap notify">
+      <div class="section-head">
+        <p class="eyebrow">Get notified</p>
+        <h2>Be first to hear about first light</h2>
+        <p>One email when the prototype sees its first stars, and one when pre-orders open. Nothing else.</p>
+      </div>
+      <!-- Connect a newsletter service (with double opt-in) by putting its form URL into data-endpoint. -->
+      <form id="notify-form" data-endpoint="" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+        <label class="check" for="consent"><input id="consent" name="consent" type="checkbox" required> <span>Send me news about the Sky Mirror telescope. I can unsubscribe at any time. See the <a href="datenschutz.html">privacy policy</a>.</span></label>
+        <button class="btn btn-primary" type="submit">Notify me</button>
+        <p class="form-msg" id="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="solid section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Before you ask</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>When can I buy one?</summary>
+          <div><p>Not yet. The design is in its fifth version and the first prototype comes next. Leave your email above and we'll write when pre-orders open.</p></div>
+        </details>
+        <details>
+          <summary>What will it cost?</summary>
+          <div><p>We'll set the price after the prototype, once the parts and suppliers are fixed. The sign-up list hears it first.</p></div>
+        </details>
+        <details>
+          <summary>Do I really need no tools?</summary>
+          <div><p>Yes. The legs, fork arms, truss tubes, cage and tube all lock with 23 hand knobs. The mirrors are aligned at our bench before shipping, and you can fine-tune the main mirror by hand with three knobs at the back.</p></div>
+        </details>
+        <details>
+          <summary>Which phones fit the photo adapter?</summary>
+          <div><p>iPhone 12 and later with MagSafe, except the iPhone 16e and the iPhone SE (2nd and 3rd generation). Other phones work with a magnetic sticker ring on the back. We are still testing the magnets next to real phone cameras before release.</p></div>
+        </details>
+        <details>
+          <summary>How big and heavy is it?</summary>
+          <div><p>The assembled telescope weighs about 5.0 kg: 2.96 kg for the tube with an eyepiece and 2.05 kg for the mount. The altitude axis sits 322 mm above the ground, and the longest parts are the carbon tubes at 616 mm.</p></div>
+        </details>
+        <details>
+          <summary>Can I look at the design?</summary>
+          <div><p>Yes. The <a href="explore.html">3D explorer</a> shows the current Fusion model part by part. You can turn it, take it apart and read what each part does.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./" aria-label="Sky Mirror home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="#8fb6cc" stroke-width="1.4"/><path d="M7.5 20.5 Q16 27.5 24.5 20.5" fill="none" stroke="#e9e6df" stroke-width="2" stroke-linecap="round"/><path d="M10 7 L16 12.2 M22 7 L16 12.2 M16 4.5 L16 12.2" stroke="#8fb6cc" stroke-width="1" stroke-linecap="round" opacity=".7"/><circle cx="16" cy="12.6" r="1.9" fill="#c4e4f7"/></svg>
+        <span>Sky Mirror</span>
+      </a>
+      <p style="margin-top:14px">3D model: SM-150/750 V5 Kit, Fusion version 15. Figures from the design model.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="explore.html">3D explorer</a>
+      <a href="#specs">Specs</a>
+      <a href="#faq">FAQ</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+    <p>© 2026 Sky Mirror</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

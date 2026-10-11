@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sky Mirror 3D Explorer</title>
+<meta name="description" content="Turn, take apart and inspect the Sky Mirror SM-150/750 telescope part by part, straight from the Fusion design model.">
+<meta name="theme-color" content="#05070b">
+<meta property="og:title" content="Sky Mirror SM-150 in 3D">
+<meta property="og:image" content="https://skymirrors.de/assets/img/og.jpg">
+<link rel="canonical" href="https://skymirrors.de/explore.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="importmap">
+{ "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/": "./assets/vendor/three/addons/" } }
+</script>
+</head>
+<body class="xp">
+<header class="nav scrolled" id="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Sky Mirror home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="#8fb6cc" stroke-width="1.4"/><path d="M7.5 20.5 Q16 27.5 24.5 20.5" fill="none" stroke="#e9e6df" stroke-width="2" stroke-linecap="round"/><path d="M10 7 L16 12.2 M22 7 L16 12.2 M16 4.5 L16 12.2" stroke="#8fb6cc" stroke-width="1" stroke-linecap="round" opacity=".7"/><circle cx="16" cy="12.6" r="1.9" fill="#c4e4f7"/></svg>
+      <span>Sky Mirror</span>
+    </a>
+    <ul class="nav-links xp-links">
+      <li><a href="./#optics">Telescope</a></li>
+      <li><a href="./#specs">Specs</a></li>
+      <li><a href="explore.html" aria-current="page">3D explorer</a></li>
+    </ul>
+    <a class="btn btn-primary btn-nav" href="./#notify">Get notified</a>
+  </div>
+</header>
+
+<main class="xp-app">
+  <div class="xp-stage" id="xp-stage">
+    <canvas id="xp-canvas" aria-label="Interactive 3D model of the Sky Mirror SM-150/750 telescope. Drag to turn, scroll to zoom, click a part to inspect it."></canvas>
+    <div class="xp-views" role="group" aria-label="Camera views">
+      <button type="button" data-view="iso">3/4</button>
+      <button type="button" data-view="side">Side</button>
+      <button type="button" data-view="front">Front</button>
+      <button type="button" data-view="cell">Mirror cell</button>
+      <button type="button" data-view="top">Top end</button>
+      <button type="button" data-view="phone">Eyepiece</button>
+    </div>
+    <div class="xp-pick" id="xp-pick" hidden>
+      <button class="xp-x" id="xp-pick-x" type="button" aria-label="Close part details">×</button>
+      <p class="label" id="xp-pick-pn"></p>
+      <h2 id="xp-pick-name"></h2>
+      <p id="xp-pick-note"></p>
+      <p class="engrave" id="xp-pick-kv"></p>
+    </div>
+    <div class="xp-loading" id="xp-loading"><span>Loading the Fusion model</span><span class="bar"><i id="xp-bar"></i></span></div>
+    <p class="xp-hint">Drag to turn · scroll or pinch to zoom · right-drag to pan · click a part</p>
+  </div>
+
+  <aside class="xp-panel" aria-label="Model controls">
+    <div class="xp-head">
+      <p class="eyebrow">3D explorer</p>
+      <h1>SM-150/750</h1>
+      <p class="engrave">Fusion model V5 Kit · version 15 · 221 parts</p>
+    </div>
+
+    <section class="xp-ctl" aria-label="Pose and display">
+      <div class="xp-row"><label for="alt">Altitude</label><output id="alt-out" class="num">40°</output></div>
+      <input id="alt" type="range" min="0" max="90" step="1" value="40">
+      <div class="xp-row"><label for="apart">Take apart</label><output id="apart-out" class="num">0 %</output></div>
+      <input id="apart" type="range" min="0" max="100" step="1" value="0">
+      <div class="xp-toggles">
+        <label class="check" for="t-rays"><input id="t-rays" type="checkbox" checked> Light path</label>
+        <label class="check" for="t-section"><input id="t-section" type="checkbox"> Cut-away</label>
+        <label class="check" for="t-mount"><input id="t-mount" type="checkbox" checked> Mount</label>
+        <label class="check" for="t-phone"><input id="t-phone" type="checkbox"> Phone adapter</label>
+      </div>
+    </section>
+
+    <section aria-label="Parts">
+      <div class="xp-row"><h2 class="label">Parts</h2><span class="label" id="xp-count"></span></div>
+      <div id="xp-parts" class="xp-parts"></div>
+    </section>
+
+    <p class="note">Shown as designed: Fusion model V5 Kit, version 15. Masses are calculated from the model. The production telescope may differ in detail.</p>
+  </aside>
+</main>
+
+<script type="module" src="assets/js/explore.js"></script>
+</body>
+</html>
