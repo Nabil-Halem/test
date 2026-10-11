@@ -636,9 +636,16 @@ export function createViewer(canvas, opts = {}) {
   // ---------- load ----------
   const loader = new GLTFLoader();
   loader.setMeshoptDecoder(MeshoptDecoder);
-  const ready = loader.loadAsync(opts.modelUrl, ev => {
-    if (opts.onProgress && ev.total) opts.onProgress(ev.loaded / ev.total);
-  }).then(gltf => {
+  // The model normally comes as a .glb file. A .txt URL holds the same file base64-encoded,
+  // for hosts that do not serve .glb (the decode happens here in the browser).
+  const loadModel = url => url.endsWith('.txt')
+    ? fetch(url).then(r => { if (!r.ok) throw new Error('model ' + r.status); return r.text(); }).then(t => {
+        const bin = atob(t.trim()), u = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+        return loader.parseAsync(u.buffer, '');
+      })
+    : loader.loadAsync(url, ev => { if (opts.onProgress && ev.total) opts.onProgress(ev.loaded / ev.total); });
+  const ready = loadModel(opts.modelUrl).then(gltf => {
     world.add(gltf.scene);
     ota = gltf.scene.getObjectByName('OTA');
     mount = gltf.scene.getObjectByName('MOUNT');

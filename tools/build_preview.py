@@ -37,4 +37,13 @@ for p in out.glob('*.html'):
     t = p.read_text(encoding='utf-8')
     t = re.sub(r'\s*<link rel="preload"[^>]*>', '', t)
     p.write_text(t, encoding='utf-8')
+# Artifact hosting does not serve .glb files: ship the model base64-encoded as text instead
+glb = out / 'assets/models/sm150-v5.glb'
+if glb.exists():
+    (out / 'assets/models/sm150-v5.glb.txt').write_text(base64.b64encode(glb.read_bytes()).decode(), encoding='ascii')
+    glb.unlink()
+    for js in (out / 'assets/js').glob('*.js'):
+        t = js.read_text(encoding='utf-8')
+        js.write_text(t.replace("'assets/models/sm150-v5.glb'", "'assets/models/sm150-v5.glb.txt'"), encoding='utf-8')
+shutil.rmtree(out / 'assets/fonts', ignore_errors=True)
 print('preview bundle in', out)

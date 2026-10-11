@@ -114,7 +114,7 @@ async function startStory() {
   status.hidden = true;
 
   const ALL = Array(viewer.STEPS.length).fill(1);
-  const frame = () => (small() ? { x: 0.5, y: 0.34 } : { x: 0.67, y: 0.5 });
+  const frame = name => (small() ? { x: 0.5, y: name === 'hero' ? 0.27 : 0.34 } : { x: 0.67, y: 0.5 });
   const apartCam = () => {
     const A = viewer.asmForBuild(0);
     return { view: 'all', asm: A, dir: { x: 1500, y: 600, z: 1750 }, margin: small() ? 1.25 : 1.06 };
@@ -133,7 +133,7 @@ async function startStory() {
     if (name === current) return;
     current = name;
     const s = chapters[name]();
-    s.framing = frame();
+    s.framing = frame(name);
     if (s.dir) s.dir = new viewer.camera.position.constructor(s.dir.x, s.dir.y, s.dir.z);
     if (s.keepAsm) {
       // the build chapter: assembly follows the scroll position, camera frames the whole kit

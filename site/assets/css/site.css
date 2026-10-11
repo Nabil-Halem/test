@@ -273,7 +273,8 @@ td .sub { display: block; font-size: var(--t-small); color: var(--faint); }
   .chapter { align-items: flex-end; padding-block: calc(var(--nav-h) + 20px) 28px; min-height: 100svh; }
   .chapter .wrap, .build-pin .wrap { grid-template-columns: minmax(0, 1fr); }
   .card { padding: 20px; gap: 12px; background: linear-gradient(180deg, rgba(11, 16, 23, 0.86), rgba(11, 16, 23, 0.94)); }
-  .hero { justify-content: flex-end; padding-bottom: 28px; }
+  .hero { justify-content: flex-end; padding-top: calc(var(--nav-h) + 40svh); padding-bottom: 28px; }
+  .hero .wrap { background: linear-gradient(180deg, rgba(5, 7, 11, 0), rgba(5, 7, 11, 0.78) 90px); padding-top: 24px; }
   .hero h1 { max-width: 12ch; }
   .hero .lead { font-size: 1rem; }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
@@ -289,6 +290,7 @@ td .sub { display: block; font-size: var(--t-small); color: var(--faint); }
   .status-line li { padding: 0 0 26px 30px; }
   .status-line li::before { top: 0; bottom: 0; left: 6px; right: auto; width: 2px; height: auto; }
   .targets { grid-template-columns: minmax(0, 1fr); }
+  td:first-child { min-width: 9.5rem; }
   .footer .wrap { grid-template-columns: minmax(0, 1fr); }
   .stage-status { bottom: auto; top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + 10px); }
 }

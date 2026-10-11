@@ -112,8 +112,9 @@ $('apart').addEventListener('input', e => {
   $('apart-out').textContent = e.target.value + ' %';
   if (k > 0 && +$('alt').value !== 90) { $('alt').value = 90; $('alt-out').textContent = '90°'; viewer.go({ alt: 90, view: 'all', frameAsm: viewer.asmApart(1), frame: viewer.PART }, { ms: 700 }); }
   viewer.setAssembly(viewer.asmApart(k));
+  viewer.setRays($('t-rays').checked && k === 0 ? 1 : 0);   // the light path only makes sense with the optics in place
 });
-$('t-rays').addEventListener('change', e => viewer.setRays(e.target.checked ? 1 : 0));
+$('t-rays').addEventListener('change', e => viewer.setRays(e.target.checked && +$('apart').value === 0 ? 1 : 0));
 $('t-section').addEventListener('change', e => viewer.setSection(e.target.checked));
 $('t-mount').addEventListener('change', e => viewer.setMount(e.target.checked));
 $('t-phone').addEventListener('change', e => viewer.go({ phone: e.target.checked ? 1 : 0 }, { ms: 600 }));
@@ -141,6 +142,7 @@ $('xp-parts').addEventListener('click', e => {
   if (isPhone(n) && !$('t-phone').checked) { $('t-phone').checked = true; viewer.go({ phone: 1 }, { ms: 600 }); }
   if (agg[n] && agg[n].group === 'MOUNT' && !$('t-mount').checked) { $('t-mount').checked = true; viewer.setMount(true); }
   select(n);
+  if (window.matchMedia('(max-width: 860px)').matches) $('xp-stage').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 $('xp-pick-x').addEventListener('click', () => select(null));
 let down = null;
