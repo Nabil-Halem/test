@@ -1,0 +1,52 @@
+[
+ {
+  "ticker": "GOOGL",
+  "name": "Alphabet Inc.",
+  "result": "PASS",
+  "score": 0.75,
+  "why": "revenue_growth_yoy 24.7 >= 10; operating_margin 31.8 >= 25; eps_ttm 19.16 > 0; pe 14.7 <= 35",
+  "screen": "Growing, profitable, not priced for perfection",
+  "rules": "revenue_growth_yoy >= 10; operating_margin >= 25; eps_ttm > 0; pe <= 35",
+  "prices_as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "AAPL",
+  "name": "Apple Inc.",
+  "result": "FAIL",
+  "score": null,
+  "why": "pe 38.3, needs <= 35",
+  "screen": "Growing, profitable, not priced for perfection",
+  "rules": "revenue_growth_yoy >= 10; operating_margin >= 25; eps_ttm > 0; pe <= 35",
+  "prices_as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "AXP",
+  "name": "AMERICAN EXPRESS CO",
+  "result": "FAIL",
+  "score": null,
+  "why": "revenue_growth_yoy 7.8, needs >= 10; operating_margin is missing",
+  "screen": "Growing, profitable, not priced for perfection",
+  "rules": "revenue_growth_yoy >= 10; operating_margin >= 25; eps_ttm > 0; pe <= 35",
+  "prices_as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "KO",
+  "name": "COCA COLA CO",
+  "result": "FAIL",
+  "score": null,
+  "why": "revenue_growth_yoy 7.4, needs >= 10",
+  "screen": "Growing, profitable, not priced for perfection",
+  "rules": "revenue_growth_yoy >= 10; operating_margin >= 25; eps_ttm > 0; pe <= 35",
+  "prices_as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "BAC",
+  "name": "BANK OF AMERICA CORP",
+  "result": "FAIL",
+  "score": null,
+  "why": "revenue_growth_yoy 3.2, needs >= 10; operating_margin is missing",
+  "screen": "Growing, profitable, not priced for perfection",
+  "rules": "revenue_growth_yoy >= 10; operating_margin >= 25; eps_ttm > 0; pe <= 35",
+  "prices_as_of": "2026-11-06T00:35:24Z"
+ }
+]

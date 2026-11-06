@@ -1,0 +1,67 @@
+[
+ {
+  "index": 1,
+  "symbol": "AAPL",
+  "side": "buy",
+  "value_usd": 1250.0,
+  "verdict": "PASS",
+  "reasons": "",
+  "warnings": "",
+  "fingerprint": "e28158d8be1ebf06",
+  "date": "2026-11-06",
+  "checked_at": "2026-11-06T00:08:05",
+  "paper": true
+ },
+ {
+  "index": 2,
+  "symbol": "AXP",
+  "side": "buy",
+  "value_usd": 1119.0,
+  "verdict": "PASS",
+  "reasons": "",
+  "warnings": "",
+  "fingerprint": "8b3f7d1aeab89d95",
+  "date": "2026-11-06",
+  "checked_at": "2026-11-06T00:08:05",
+  "paper": true
+ },
+ {
+  "index": 3,
+  "symbol": "GOOGL",
+  "side": "buy",
+  "value_usd": 823.0,
+  "verdict": "PASS",
+  "reasons": "",
+  "warnings": "",
+  "fingerprint": "647b3d8b498bbcd4",
+  "date": "2026-11-06",
+  "checked_at": "2026-11-06T00:08:05",
+  "paper": true
+ },
+ {
+  "index": 4,
+  "symbol": "KO",
+  "side": "buy",
+  "value_usd": 708.0,
+  "verdict": "PASS",
+  "reasons": "",
+  "warnings": "",
+  "fingerprint": "cb5eb35cb0fcd66c",
+  "date": "2026-11-06",
+  "checked_at": "2026-11-06T00:08:05",
+  "paper": true
+ },
+ {
+  "index": 5,
+  "symbol": "BAC",
+  "side": "buy",
+  "value_usd": 600.0,
+  "verdict": "PASS",
+  "reasons": "",
+  "warnings": "",
+  "fingerprint": "e74f14ff9221ca09",
+  "date": "2026-11-06",
+  "checked_at": "2026-11-06T00:08:05",
+  "paper": true
+ }
+]

@@ -1,0 +1,19 @@
+{
+ "written_at": "2026-11-06T00:46:26Z",
+ "files": [
+  "holdings",
+  "filing",
+  "changes",
+  "targets",
+  "orders",
+  "verdicts",
+  "rules",
+  "quotes",
+  "earnings",
+  "quarters",
+  "shortlist",
+  "news",
+  "congress"
+ ],
+ "note": "Row files for the Berkshire Copycat dashboard. Ask Claude to refresh the dashboard and it uploads these."
+}

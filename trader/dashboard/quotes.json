@@ -1,0 +1,47 @@
+[
+ {
+  "ticker": "AAPL",
+  "price_usd": 344.17,
+  "prev_close_usd": 349.51,
+  "change_pct": -1.53,
+  "quoted_at": "2026-11-05T21:00:01Z",
+  "source": "yahoo",
+  "as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "AXP",
+  "price_usd": 324.97,
+  "prev_close_usd": 332.59,
+  "change_pct": -2.29,
+  "quoted_at": "2026-11-05T21:01:31Z",
+  "source": "yahoo",
+  "as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "GOOGL",
+  "price_usd": 282.57,
+  "prev_close_usd": 288.93,
+  "change_pct": -2.2,
+  "quoted_at": "2026-11-05T21:00:01Z",
+  "source": "yahoo",
+  "as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "KO",
+  "price_usd": 95.73,
+  "prev_close_usd": 95.8,
+  "change_pct": -0.07,
+  "quoted_at": "2026-11-05T21:00:02Z",
+  "source": "yahoo",
+  "as_of": "2026-11-06T00:35:24Z"
+ },
+ {
+  "ticker": "BAC",
+  "price_usd": 49.76,
+  "prev_close_usd": 51.63,
+  "change_pct": -3.62,
+  "quoted_at": "2026-11-05T21:00:02Z",
+  "source": "yahoo",
+  "as_of": "2026-11-06T00:35:24Z"
+ }
+]

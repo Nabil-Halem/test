@@ -3,3 +3,9 @@ node_modules/
 site/_*.html
 # The full 3D design model stays out of the public repository until the owner decides to publish it
 site/assets/models/*.glb
+# trader-skill state that every refresh regenerates
+trader/state/raw/
+trader/state/ptr-pdfs/
+trader/state/news.json
+trader/state/pelosi.json
+trader/state/alerts.json

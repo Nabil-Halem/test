@@ -1,0 +1,52 @@
+[
+ {
+  "rank": 1,
+  "ticker": "AAPL",
+  "name": "Apple",
+  "weight_pct": 30.67,
+  "pct_of_13f": 22.04,
+  "value_usd": 65950296923.0,
+  "shares": 227917808.0,
+  "classes": "AAPL"
+ },
+ {
+  "rank": 2,
+  "ticker": "AXP",
+  "name": "American Express",
+  "weight_pct": 23.85,
+  "pct_of_13f": 17.14,
+  "value_usd": 51282319275.0,
+  "shares": 151610700.0,
+  "classes": "AXP"
+ },
+ {
+  "rank": 3,
+  "ticker": "GOOGL",
+  "name": "Alphabet",
+  "weight_pct": 17.56,
+  "pct_of_13f": 12.62,
+  "value_usd": 37764088383.0,
+  "shares": 105979600.0,
+  "classes": "GOOGL+GOOG"
+ },
+ {
+  "rank": 4,
+  "ticker": "KO",
+  "name": "Coca Cola",
+  "weight_pct": 15.11,
+  "pct_of_13f": 10.86,
+  "value_usd": 32508000000.0,
+  "shares": 400000000.0,
+  "classes": "KO"
+ },
+ {
+  "rank": 5,
+  "ticker": "BAC",
+  "name": "Bank of America",
+  "weight_pct": 12.8,
+  "pct_of_13f": 9.2,
+  "value_usd": 27543790975.0,
+  "shares": 483394015.0,
+  "classes": "BAC"
+ }
+]

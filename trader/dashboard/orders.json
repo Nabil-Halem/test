@@ -1,0 +1,72 @@
+[
+ {
+  "index": 1,
+  "symbol": "AAPL",
+  "side": "buy",
+  "notional_usd": 1250.0,
+  "order_type": "market",
+  "time_in_force": "day",
+  "weight_pct": 30.67,
+  "capped": true,
+  "cap_pct": 25.0,
+  "status": "proposed",
+  "paper": true,
+  "created_at": "2026-11-06T00:08:05"
+ },
+ {
+  "index": 2,
+  "symbol": "AXP",
+  "side": "buy",
+  "notional_usd": 1119.0,
+  "order_type": "market",
+  "time_in_force": "day",
+  "weight_pct": 23.85,
+  "capped": false,
+  "cap_pct": null,
+  "status": "proposed",
+  "paper": true,
+  "created_at": "2026-11-06T00:08:05"
+ },
+ {
+  "index": 3,
+  "symbol": "GOOGL",
+  "side": "buy",
+  "notional_usd": 823.0,
+  "order_type": "market",
+  "time_in_force": "day",
+  "weight_pct": 17.56,
+  "capped": false,
+  "cap_pct": null,
+  "status": "proposed",
+  "paper": true,
+  "created_at": "2026-11-06T00:08:05"
+ },
+ {
+  "index": 4,
+  "symbol": "KO",
+  "side": "buy",
+  "notional_usd": 708.0,
+  "order_type": "market",
+  "time_in_force": "day",
+  "weight_pct": 15.11,
+  "capped": false,
+  "cap_pct": null,
+  "status": "proposed",
+  "paper": true,
+  "created_at": "2026-11-06T00:08:05"
+ },
+ {
+  "index": 5,
+  "symbol": "BAC",
+  "side": "buy",
+  "notional_usd": 600.0,
+  "order_type": "market",
+  "time_in_force": "day",
+  "weight_pct": 12.8,
+  "capped": false,
+  "cap_pct": null,
+  "status": "proposed",
+  "paper": true,
+  "created_at": "2026-11-06T00:08:05"
+ }
+]
