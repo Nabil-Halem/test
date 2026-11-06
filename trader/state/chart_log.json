@@ -1,0 +1,77 @@
+{
+ "entries": [
+  {
+   "made": "2026-11-05",
+   "symbol": "AAPL",
+   "close": 344.17,
+   "lean": "bullish",
+   "score": 5,
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "bear_p10": 314.23,
+   "bull_p90": 376.97,
+   "resolved": false
+  },
+  {
+   "made": "2026-11-05",
+   "symbol": "AXP",
+   "close": 324.97,
+   "lean": "neutral",
+   "score": -1,
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "bear_p10": 296.61,
+   "bull_p90": 356.04,
+   "resolved": false
+  },
+  {
+   "made": "2026-11-05",
+   "symbol": "BAC",
+   "close": 49.76,
+   "lean": "bearish",
+   "score": -3,
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "bear_p10": 44.87,
+   "bull_p90": 55.18,
+   "resolved": false
+  },
+  {
+   "made": "2026-11-05",
+   "symbol": "BTC-USD",
+   "close": 75942.125,
+   "lean": "neutral",
+   "score": -1,
+   "horizon_days": 20,
+   "target_date": "2026-11-25",
+   "bear_p10": 67328.79,
+   "bull_p90": 85657.35,
+   "resolved": false
+  },
+  {
+   "made": "2026-11-05",
+   "symbol": "GOOGL",
+   "close": 282.57,
+   "lean": "bearish",
+   "score": -7,
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "bear_p10": 234.72,
+   "bull_p90": 340.18,
+   "resolved": false
+  },
+  {
+   "made": "2026-11-05",
+   "symbol": "KO",
+   "close": 95.73,
+   "lean": "bullish",
+   "score": 7,
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "bear_p10": 88.58,
+   "bull_p90": 103.46,
+   "resolved": false
+  }
+ ],
+ "note": "Every chart read, with its target date. Resolved entries say what actually happened. The score is this tool's own record, not a promise."
+}

@@ -1,0 +1,338 @@
+[
+ {
+  "key": "AAPL-1",
+  "symbol": "AAPL",
+  "signal": "Price above its 200-day average",
+  "state": true,
+  "vote": 1,
+  "detail": "344.17 vs 298.34"
+ },
+ {
+  "key": "AAPL-2",
+  "symbol": "AAPL",
+  "signal": "50-day average above the 200-day",
+  "state": true,
+  "vote": 1,
+  "detail": "335.46 vs 298.34"
+ },
+ {
+  "key": "AAPL-3",
+  "symbol": "AAPL",
+  "signal": "50-day average rising over the last month",
+  "state": true,
+  "vote": 1,
+  "detail": "+4.1%"
+ },
+ {
+  "key": "AAPL-4",
+  "symbol": "AAPL",
+  "signal": "MACD above its signal line",
+  "state": false,
+  "vote": -1,
+  "detail": "2.29 vs 3.03"
+ },
+ {
+  "key": "AAPL-5",
+  "symbol": "AAPL",
+  "signal": "RSI above 50",
+  "state": true,
+  "vote": 1,
+  "detail": "RSI 53"
+ },
+ {
+  "key": "AAPL-6",
+  "symbol": "AAPL",
+  "signal": "Up over the last 20 trading days",
+  "state": true,
+  "vote": 1,
+  "detail": "+1.1%"
+ },
+ {
+  "key": "AAPL-7",
+  "symbol": "AAPL",
+  "signal": "Closer to the 52-week high than the low",
+  "state": true,
+  "vote": 1,
+  "detail": "90% of the 52-week range"
+ },
+ {
+  "key": "AXP-1",
+  "symbol": "AXP",
+  "signal": "Price above its 200-day average",
+  "state": false,
+  "vote": -1,
+  "detail": "324.97 vs 325.46"
+ },
+ {
+  "key": "AXP-2",
+  "symbol": "AXP",
+  "signal": "50-day average above the 200-day",
+  "state": false,
+  "vote": -1,
+  "detail": "316.51 vs 325.46"
+ },
+ {
+  "key": "AXP-3",
+  "symbol": "AXP",
+  "signal": "50-day average rising over the last month",
+  "state": false,
+  "vote": -1,
+  "detail": "-2.7%"
+ },
+ {
+  "key": "AXP-4",
+  "symbol": "AXP",
+  "signal": "MACD above its signal line",
+  "state": true,
+  "vote": 1,
+  "detail": "3.40 vs 1.84"
+ },
+ {
+  "key": "AXP-5",
+  "symbol": "AXP",
+  "signal": "RSI above 50",
+  "state": true,
+  "vote": 1,
+  "detail": "RSI 56"
+ },
+ {
+  "key": "AXP-6",
+  "symbol": "AXP",
+  "signal": "Up over the last 20 trading days",
+  "state": true,
+  "vote": 1,
+  "detail": "+5.5%"
+ },
+ {
+  "key": "AXP-7",
+  "symbol": "AXP",
+  "signal": "Closer to the 52-week high than the low",
+  "state": false,
+  "vote": -1,
+  "detail": "35% of the 52-week range"
+ },
+ {
+  "key": "GOOGL-1",
+  "symbol": "GOOGL",
+  "signal": "Price above its 200-day average",
+  "state": false,
+  "vote": -1,
+  "detail": "282.57 vs 339.74"
+ },
+ {
+  "key": "GOOGL-2",
+  "symbol": "GOOGL",
+  "signal": "50-day average above the 200-day",
+  "state": false,
+  "vote": -1,
+  "detail": "334.05 vs 339.74"
+ },
+ {
+  "key": "GOOGL-3",
+  "symbol": "GOOGL",
+  "signal": "50-day average rising over the last month",
+  "state": false,
+  "vote": -1,
+  "detail": "-3.4%"
+ },
+ {
+  "key": "GOOGL-4",
+  "symbol": "GOOGL",
+  "signal": "MACD above its signal line",
+  "state": false,
+  "vote": -1,
+  "detail": "-16.55 vs -11.84"
+ },
+ {
+  "key": "GOOGL-5",
+  "symbol": "GOOGL",
+  "signal": "RSI above 50",
+  "state": false,
+  "vote": -1,
+  "detail": "RSI 28"
+ },
+ {
+  "key": "GOOGL-6",
+  "symbol": "GOOGL",
+  "signal": "Up over the last 20 trading days",
+  "state": false,
+  "vote": -1,
+  "detail": "-18.9%"
+ },
+ {
+  "key": "GOOGL-7",
+  "symbol": "GOOGL",
+  "signal": "Closer to the 52-week high than the low",
+  "state": false,
+  "vote": -1,
+  "detail": "9% of the 52-week range"
+ },
+ {
+  "key": "KO-1",
+  "symbol": "KO",
+  "signal": "Price above its 200-day average",
+  "state": true,
+  "vote": 1,
+  "detail": "95.73 vs 82.62"
+ },
+ {
+  "key": "KO-2",
+  "symbol": "KO",
+  "signal": "50-day average above the 200-day",
+  "state": true,
+  "vote": 1,
+  "detail": "89.81 vs 82.62"
+ },
+ {
+  "key": "KO-3",
+  "symbol": "KO",
+  "signal": "50-day average rising over the last month",
+  "state": true,
+  "vote": 1,
+  "detail": "+2.1%"
+ },
+ {
+  "key": "KO-4",
+  "symbol": "KO",
+  "signal": "MACD above its signal line",
+  "state": true,
+  "vote": 1,
+  "detail": "1.70 vs 1.48"
+ },
+ {
+  "key": "KO-5",
+  "symbol": "KO",
+  "signal": "RSI above 50",
+  "state": true,
+  "vote": 1,
+  "detail": "RSI 65"
+ },
+ {
+  "key": "KO-6",
+  "symbol": "KO",
+  "signal": "Up over the last 20 trading days",
+  "state": true,
+  "vote": 1,
+  "detail": "+9.1%"
+ },
+ {
+  "key": "KO-7",
+  "symbol": "KO",
+  "signal": "Closer to the 52-week high than the low",
+  "state": true,
+  "vote": 1,
+  "detail": "94% of the 52-week range"
+ },
+ {
+  "key": "BAC-1",
+  "symbol": "BAC",
+  "signal": "Price above its 200-day average",
+  "state": false,
+  "vote": -1,
+  "detail": "49.76 vs 54.91"
+ },
+ {
+  "key": "BAC-2",
+  "symbol": "BAC",
+  "signal": "50-day average above the 200-day",
+  "state": true,
+  "vote": 1,
+  "detail": "55.47 vs 54.91"
+ },
+ {
+  "key": "BAC-3",
+  "symbol": "BAC",
+  "signal": "50-day average rising over the last month",
+  "state": false,
+  "vote": -1,
+  "detail": "-7.9%"
+ },
+ {
+  "key": "BAC-4",
+  "symbol": "BAC",
+  "signal": "MACD above its signal line",
+  "state": true,
+  "vote": 1,
+  "detail": "-1.43 vs -1.65"
+ },
+ {
+  "key": "BAC-5",
+  "symbol": "BAC",
+  "signal": "RSI above 50",
+  "state": false,
+  "vote": -1,
+  "detail": "RSI 36"
+ },
+ {
+  "key": "BAC-6",
+  "symbol": "BAC",
+  "signal": "Up over the last 20 trading days",
+  "state": false,
+  "vote": -1,
+  "detail": "-7.2%"
+ },
+ {
+  "key": "BAC-7",
+  "symbol": "BAC",
+  "signal": "Closer to the 52-week high than the low",
+  "state": false,
+  "vote": -1,
+  "detail": "19% of the 52-week range"
+ },
+ {
+  "key": "BTC-USD-1",
+  "symbol": "BTC-USD",
+  "signal": "Price above its 200-day average",
+  "state": true,
+  "vote": 1,
+  "detail": "75942.12 vs 73191.43"
+ },
+ {
+  "key": "BTC-USD-2",
+  "symbol": "BTC-USD",
+  "signal": "50-day average above the 200-day",
+  "state": true,
+  "vote": 1,
+  "detail": "81988.02 vs 73191.43"
+ },
+ {
+  "key": "BTC-USD-3",
+  "symbol": "BTC-USD",
+  "signal": "50-day average rising over the last month",
+  "state": true,
+  "vote": 1,
+  "detail": "+0.9%"
+ },
+ {
+  "key": "BTC-USD-4",
+  "symbol": "BTC-USD",
+  "signal": "MACD above its signal line",
+  "state": false,
+  "vote": -1,
+  "detail": "-1262.93 vs -998.53"
+ },
+ {
+  "key": "BTC-USD-5",
+  "symbol": "BTC-USD",
+  "signal": "RSI above 50",
+  "state": false,
+  "vote": -1,
+  "detail": "RSI 39"
+ },
+ {
+  "key": "BTC-USD-6",
+  "symbol": "BTC-USD",
+  "signal": "Up over the last 20 trading days",
+  "state": false,
+  "vote": -1,
+  "detail": "-6.8%"
+ },
+ {
+  "key": "BTC-USD-7",
+  "symbol": "BTC-USD",
+  "signal": "Closer to the 52-week high than the low",
+  "state": false,
+  "vote": -1,
+  "detail": "37% of the 52-week range"
+ }
+]

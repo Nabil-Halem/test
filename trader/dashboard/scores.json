@@ -1,0 +1,58 @@
+[
+ {
+  "symbol": "AAPL",
+  "made": 1,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ },
+ {
+  "symbol": "AXP",
+  "made": 1,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ },
+ {
+  "symbol": "BAC",
+  "made": 1,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ },
+ {
+  "symbol": "BTC-USD",
+  "made": 1,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ },
+ {
+  "symbol": "GOOGL",
+  "made": 1,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ },
+ {
+  "symbol": "KO",
+  "made": 1,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ },
+ {
+  "symbol": "ALL",
+  "made": 6,
+  "resolved": 0,
+  "range_hits": 0,
+  "direction_calls": 0,
+  "direction_hits": 0
+ }
+]

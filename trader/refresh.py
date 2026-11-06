@@ -9,7 +9,7 @@ the dashboard reads:
     python3 trader/refresh.py --skip news congress   # leave some steps out
 
 Steps: copycat (13F) -> budget -> risk -> quotes -> analyst (earnings) ->
-screener -> news -> congress -> dashboard files. Each network step that fails
+screener -> news -> congress -> chart read -> dashboard files. Each network step that fails
 is reported and skipped; the dashboard files are built from whatever exists.
 
 Paper only. Nothing here talks to a broker, and nothing is placed.
@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))      # trader/
 ROOT = os.path.dirname(HERE)                           # the project; the skills read trader/ from here
 DASH = os.path.join(HERE, "dashboard")
 RAW = os.path.join(HERE, "state", "raw")
-STEPS = ["copycat", "budget", "risk", "quotes", "analyst", "screener", "news", "congress"]
+STEPS = ["copycat", "budget", "risk", "quotes", "analyst", "screener", "news", "congress", "chart"]
 ALIASES = {  # extra words that mean a company, for the news filter
     "AAPL": ["apple", "iphone"], "AXP": ["american express", "amex"], "GOOGL": ["alphabet", "google", "youtube", "waymo"],
     "GOOG": ["alphabet", "google"], "KO": ["coca-cola", "coca cola", "coke"], "BAC": ["bank of america", "bofa"],
@@ -131,6 +131,25 @@ def step_congress(P, a):
         out = run(P, "trader-pelosi", "ptr.py", "fetch", doc, "--json", capture=True)
         save(os.path.join(RAW, "ptr-%s.json" % doc), json.loads(out))
     print("  %d report(s) for %s" % (len(docs), a.member))
+
+
+def step_chart(P, a):
+    cmd = [sys.executable, os.path.join(HERE, "chart_read.py"), "--write", "--horizon", str(a.horizon)]
+    print("  $", "python3 trader/chart_read.py --write --horizon", a.horizon)
+    res = subprocess.run(cmd, cwd=ROOT, text=True)
+    if res.returncode != 0:
+        raise RuntimeError("chart_read.py exited %d" % res.returncode)
+
+
+def sma(xs, n):
+    out, s = [None] * len(xs), 0.0
+    for i, x in enumerate(xs):
+        s += x
+        if i >= n:
+            s -= xs[i - n]
+        if i >= n - 1:
+            out[i] = s / n
+    return out
 
 
 # ------------------------------------------------------------ dashboard files
@@ -276,6 +295,34 @@ def build_dashboard():
         rows.sort(key=lambda r: (r["filed"], r["traded"]), reverse=True)
         save(os.path.join(DASH, "congress.json"), rows); written.append("congress")
 
+    CR = load(os.path.join(T, "chart_read.json"))
+    if CR:
+        reads, signals, candles = [], [], []
+        for rd in CR["reads"]:
+            t, m, v, lv, sc, br = rd["trend"], rd["momentum"], rd["volatility"], rd["levels"], rd["scenarios"], rd["base_rate"]
+            reads.append({"symbol": rd["symbol"], "name": rd["name"], "as_of": rd["as_of"], "close": rd["close"], "live_price": rd.get("live_price"),
+                          "horizon_days": rd["horizon_days"], "target_date": rd["target_date"], "trend": t["label"], "sma50": t["sma50"], "sma200": t["sma200"],
+                          "sma50_slope_pct": t["sma50_slope_pct"], "high_52w": t["high_52w"], "low_52w": t["low_52w"], "pct_from_52w_high": t["pct_from_52w_high"],
+                          "rsi14": m["rsi14"], "macd_hist": m["macd_hist"], "ret_20d_pct": m["ret_20d_pct"], "daily_vol_pct": v["daily_vol_pct"],
+                          "annual_vol_pct": v["annual_vol_pct"], "support": lv["support"], "resistance": lv["resistance"], "patterns": "; ".join(rd["patterns"]),
+                          "score": rd["score"], "checks_bullish": sum(1 for c in rd["checklist"] if c["state"]), "checks_total": len(rd["checklist"]),
+                          "lean": rd["lean"], "bear_p10": sc["bear_p10"], "inner_low": sc["inner_low"], "base": sc["base"], "inner_high": sc["inner_high"],
+                          "bull_p90": sc["bull_p90"], "setup": br["setup"], "base_n": br["n"], "base_pct_up": br["pct_up"], "base_median_pct": br["median_pct"],
+                          "uncond_pct_up": br["uncond_pct_up"], "years": br["years"], "read": rd["read"]})
+            for i, c in enumerate(rd["checklist"], 1):
+                signals.append({"key": "%s-%d" % (rd["symbol"], i), "symbol": rd["symbol"], "signal": c["signal"], "state": bool(c["state"]), "vote": c["vote"], "detail": c["detail"]})
+            raw = load(os.path.join(RAW, "candles-%s.json" % rd["symbol"]))
+            if raw:
+                bars = raw["bars"]; closes = [b["close"] for b in bars]; s50, s200 = sma(closes, 50), sma(closes, 200)
+                for i in range(max(0, len(bars) - 120), len(bars)):
+                    b = bars[i]
+                    candles.append({"key": "%s-%s" % (rd["symbol"], b["date"]), "symbol": rd["symbol"], "date": b["date"], "open": round(b["open"], 4),
+                                    "high": round(b["high"], 4), "low": round(b["low"], 4), "close": round(b["close"], 4), "volume": b.get("volume", 0),
+                                    "sma50": round(s50[i], 4) if s50[i] else None, "sma200": round(s200[i], 4) if s200[i] else None})
+        save(os.path.join(DASH, "reads.json"), reads); save(os.path.join(DASH, "signals.json"), signals)
+        save(os.path.join(DASH, "candles.json"), candles); save(os.path.join(DASH, "scores.json"), CR.get("scores", []))
+        written += ["reads", "signals", "candles", "scores"]
+
     save(os.path.join(DASH, "manifest.json"), {"written_at": datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
                                                "files": written, "note": "Row files for the Berkshire Copycat dashboard. Ask Claude to refresh the dashboard and it uploads these."})
     return written
@@ -287,6 +334,7 @@ def main(argv=None):
     ap.add_argument("--top", type=int, default=5)
     ap.add_argument("--member", default="pelosi", help="the member of Congress to track")
     ap.add_argument("--hours", type=int, default=168, help="how far back the news check looks")
+    ap.add_argument("--horizon", type=int, default=20, help="trading days ahead for the chart read's range and base rate")
     ap.add_argument("--skip", nargs="*", default=[], choices=STEPS, help="steps to leave out")
     ap.add_argument("--data-only", action="store_true", help="only rebuild trader/dashboard/ from the files already on disk")
     a = ap.parse_args(argv)

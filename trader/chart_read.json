@@ -1,0 +1,729 @@
+{
+ "as_of": "2026-11-06",
+ "horizon_days": 20,
+ "reads": [
+  {
+   "symbol": "AAPL",
+   "name": "Apple Inc.",
+   "currency": "USD",
+   "as_of": "2026-11-05",
+   "close": 344.17,
+   "live_price": 342.41,
+   "live_time": "2026-11-06T20:53:56+00:00",
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "trend": {
+    "label": "uptrend",
+    "sma20": 343.1,
+    "sma50": 335.46,
+    "sma200": 298.34,
+    "sma50_slope_pct": 4.07,
+    "high_52w": 355.38,
+    "low_52w": 243.42,
+    "pct_from_52w_high": -3.15,
+    "pct_from_52w_low": 41.39
+   },
+   "momentum": {
+    "rsi14": 53.0,
+    "macd": 2.292,
+    "macd_signal": 3.027,
+    "macd_hist": -0.735,
+    "ret_5d_pct": -1.36,
+    "ret_20d_pct": 1.1,
+    "ret_60d_pct": 13.87
+   },
+   "volatility": {
+    "daily_vol_pct": 1.59,
+    "annual_vol_pct": 25.2,
+    "atr14": 10.53,
+    "atr14_pct": 3.06
+   },
+   "levels": {
+    "support": 338.7,
+    "resistance": 344.57,
+    "high_20d": 355.38,
+    "low_20d": 325.33
+   },
+   "patterns": [],
+   "checklist": [
+    {
+     "signal": "Price above its 200-day average",
+     "state": true,
+     "vote": 1,
+     "detail": "344.17 vs 298.34"
+    },
+    {
+     "signal": "50-day average above the 200-day",
+     "state": true,
+     "vote": 1,
+     "detail": "335.46 vs 298.34"
+    },
+    {
+     "signal": "50-day average rising over the last month",
+     "state": true,
+     "vote": 1,
+     "detail": "+4.1%"
+    },
+    {
+     "signal": "MACD above its signal line",
+     "state": false,
+     "vote": -1,
+     "detail": "2.29 vs 3.03"
+    },
+    {
+     "signal": "RSI above 50",
+     "state": true,
+     "vote": 1,
+     "detail": "RSI 53"
+    },
+    {
+     "signal": "Up over the last 20 trading days",
+     "state": true,
+     "vote": 1,
+     "detail": "+1.1%"
+    },
+    {
+     "signal": "Closer to the 52-week high than the low",
+     "state": true,
+     "vote": 1,
+     "detail": "90% of the 52-week range"
+    }
+   ],
+   "score": 5,
+   "lean": "bullish",
+   "scenarios": {
+    "bear_p10": 314.23,
+    "inner_low": 320.58,
+    "base": 344.17,
+    "inner_high": 369.5,
+    "bull_p90": 376.97
+   },
+   "base_rate": {
+    "setup": "above 200-day, RSI mid, MACD down",
+    "n": 225,
+    "median_pct": 2.57,
+    "pct_up": 65.0,
+    "p10_pct": -6.63,
+    "p90_pct": 9.59,
+    "uncond_n": 1035,
+    "uncond_median_pct": 1.99,
+    "uncond_pct_up": 62.0,
+    "years": 5.0
+   },
+   "read": "Apple Inc. closed at 344.17 on 2026-11-05, -3.2% from its 52-week high. Trend: uptrend, with the price above the 200-day average and the 50-day rising over the past month. Momentum: RSI 53, MACD below its signal, +1.1% over 20 days. Nearest levels: support 338.70, resistance 344.57. Over the next 20 trading days, ordinary volatility (1.6% a day) puts it between 314.23 and 376.97 eight times in ten. Base rate: in 5.0 years of history, this setup (above 200-day, RSI mid, MACD down) came up 225 times and the price was higher 20 trading days later 65.0% of the time, median move +2.6%, against 62.0% for all days. Checklist 6 of 7 bullish: lean bullish. A lean is a description of the chart, not a forecast or a recommendation."
+  },
+  {
+   "symbol": "AXP",
+   "name": "American Express Company",
+   "currency": "USD",
+   "as_of": "2026-11-05",
+   "close": 324.97,
+   "live_price": 320.89,
+   "live_time": "2026-11-06T20:53:55+00:00",
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "trend": {
+    "label": "downtrend",
+    "sma20": 318.02,
+    "sma50": 316.51,
+    "sma200": 325.46,
+    "sma50_slope_pct": -2.7,
+    "high_52w": 387.49,
+    "low_52w": 290.97,
+    "pct_from_52w_high": -16.13,
+    "pct_from_52w_low": 11.69
+   },
+   "momentum": {
+    "rsi14": 55.6,
+    "macd": 3.402,
+    "macd_signal": 1.841,
+    "macd_hist": 1.561,
+    "ret_5d_pct": 0.39,
+    "ret_20d_pct": 5.48,
+    "ret_60d_pct": -5.55
+   },
+   "volatility": {
+    "daily_vol_pct": 1.59,
+    "annual_vol_pct": 25.3,
+    "atr14": 9.35,
+    "atr14_pct": 2.88
+   },
+   "levels": {
+    "support": 318.2,
+    "resistance": 352.49,
+    "high_20d": 343.89,
+    "low_20d": 302.26
+   },
+   "patterns": [],
+   "checklist": [
+    {
+     "signal": "Price above its 200-day average",
+     "state": false,
+     "vote": -1,
+     "detail": "324.97 vs 325.46"
+    },
+    {
+     "signal": "50-day average above the 200-day",
+     "state": false,
+     "vote": -1,
+     "detail": "316.51 vs 325.46"
+    },
+    {
+     "signal": "50-day average rising over the last month",
+     "state": false,
+     "vote": -1,
+     "detail": "-2.7%"
+    },
+    {
+     "signal": "MACD above its signal line",
+     "state": true,
+     "vote": 1,
+     "detail": "3.40 vs 1.84"
+    },
+    {
+     "signal": "RSI above 50",
+     "state": true,
+     "vote": 1,
+     "detail": "RSI 56"
+    },
+    {
+     "signal": "Up over the last 20 trading days",
+     "state": true,
+     "vote": 1,
+     "detail": "+5.5%"
+    },
+    {
+     "signal": "Closer to the 52-week high than the low",
+     "state": false,
+     "vote": -1,
+     "detail": "35% of the 52-week range"
+    }
+   ],
+   "score": -1,
+   "lean": "neutral",
+   "scenarios": {
+    "bear_p10": 296.61,
+    "inner_low": 302.62,
+    "base": 324.97,
+    "inner_high": 348.97,
+    "bull_p90": 356.04
+   },
+   "base_rate": {
+    "setup": "below 200-day, RSI mid, MACD up",
+    "n": 116,
+    "median_pct": 5.87,
+    "pct_up": 72.0,
+    "p10_pct": -5.47,
+    "p90_pct": 16.78,
+    "uncond_n": 1035,
+    "uncond_median_pct": 1.29,
+    "uncond_pct_up": 57.0,
+    "years": 5.0
+   },
+   "read": "American Express Company closed at 324.97 on 2026-11-05, -16.1% from its 52-week high. Trend: downtrend, with the price below the 200-day average and the 50-day falling over the past month. Momentum: RSI 56, MACD above its signal, +5.5% over 20 days. Nearest levels: support 318.20, resistance 352.49. Over the next 20 trading days, ordinary volatility (1.6% a day) puts it between 296.61 and 356.04 eight times in ten. Base rate: in 5.0 years of history, this setup (below 200-day, RSI mid, MACD up) came up 116 times and the price was higher 20 trading days later 72.0% of the time, median move +5.9%, against 57.0% for all days. Checklist 3 of 7 bullish: lean neutral. A lean is a description of the chart, not a forecast or a recommendation."
+  },
+  {
+   "symbol": "GOOGL",
+   "name": "Alphabet Inc.",
+   "currency": "USD",
+   "as_of": "2026-11-05",
+   "close": 282.57,
+   "live_price": 284.89,
+   "live_time": "2026-11-06T20:53:55+00:00",
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "trend": {
+    "label": "downtrend",
+    "sma20": 320.79,
+    "sma50": 334.05,
+    "sma200": 339.74,
+    "sma50_slope_pct": -3.42,
+    "high_52w": 408.61,
+    "low_52w": 270.7,
+    "pct_from_52w_high": -30.85,
+    "pct_from_52w_low": 4.38
+   },
+   "momentum": {
+    "rsi14": 28.0,
+    "macd": -16.547,
+    "macd_signal": -11.838,
+    "macd_hist": -4.708,
+    "ret_5d_pct": -0.44,
+    "ret_20d_pct": -18.87,
+    "ret_60d_pct": -17.75
+   },
+   "volatility": {
+    "daily_vol_pct": 3.24,
+    "annual_vol_pct": 51.4,
+    "atr14": 12.2,
+    "atr14_pct": 4.32
+   },
+   "levels": {
+    "support": null,
+    "resistance": 351.6,
+    "high_20d": 359.4,
+    "low_20d": 276.92
+   },
+   "patterns": [
+    "death cross on 2026-10-29 (50-day crossed below 200-day)",
+    "RSI under 30 (oversold zone)"
+   ],
+   "checklist": [
+    {
+     "signal": "Price above its 200-day average",
+     "state": false,
+     "vote": -1,
+     "detail": "282.57 vs 339.74"
+    },
+    {
+     "signal": "50-day average above the 200-day",
+     "state": false,
+     "vote": -1,
+     "detail": "334.05 vs 339.74"
+    },
+    {
+     "signal": "50-day average rising over the last month",
+     "state": false,
+     "vote": -1,
+     "detail": "-3.4%"
+    },
+    {
+     "signal": "MACD above its signal line",
+     "state": false,
+     "vote": -1,
+     "detail": "-16.55 vs -11.84"
+    },
+    {
+     "signal": "RSI above 50",
+     "state": false,
+     "vote": -1,
+     "detail": "RSI 28"
+    },
+    {
+     "signal": "Up over the last 20 trading days",
+     "state": false,
+     "vote": -1,
+     "detail": "-18.9%"
+    },
+    {
+     "signal": "Closer to the 52-week high than the low",
+     "state": false,
+     "vote": -1,
+     "detail": "9% of the 52-week range"
+    }
+   ],
+   "score": -7,
+   "lean": "bearish",
+   "scenarios": {
+    "bear_p10": 234.72,
+    "inner_low": 244.49,
+    "base": 282.57,
+    "inner_high": 326.59,
+    "bull_p90": 340.18
+   },
+   "base_rate": {
+    "setup": "below 200-day, RSI low, MACD down",
+    "n": 73,
+    "median_pct": 0.95,
+    "pct_up": 55.0,
+    "p10_pct": -9.1,
+    "p90_pct": 14.2,
+    "uncond_n": 1035,
+    "uncond_median_pct": 2.31,
+    "uncond_pct_up": 60.0,
+    "years": 5.0
+   },
+   "read": "Alphabet Inc. closed at 282.57 on 2026-11-05, -30.8% from its 52-week high. Trend: downtrend, with the price below the 200-day average and the 50-day falling over the past month. Momentum: RSI 28, MACD below its signal, -18.9% over 20 days. Nearest levels: support none in the last six months, resistance 351.60. Patterns: death cross on 2026-10-29 (50-day crossed below 200-day); RSI under 30 (oversold zone). Over the next 20 trading days, ordinary volatility (3.2% a day) puts it between 234.72 and 340.18 eight times in ten. Base rate: in 5.0 years of history, this setup (below 200-day, RSI low, MACD down) came up 73 times and the price was higher 20 trading days later 55.0% of the time, median move +0.9%, against 60.0% for all days. Checklist 0 of 7 bullish: lean bearish. A lean is a description of the chart, not a forecast or a recommendation."
+  },
+  {
+   "symbol": "KO",
+   "name": "The Coca-Cola Company",
+   "currency": "USD",
+   "as_of": "2026-11-05",
+   "close": 95.73,
+   "live_price": 95.72,
+   "live_time": "2026-11-06T20:53:57+00:00",
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "trend": {
+    "label": "uptrend",
+    "sma20": 92.9,
+    "sma50": 89.81,
+    "sma200": 82.62,
+    "sma50_slope_pct": 2.07,
+    "high_52w": 97.39,
+    "low_52w": 67.27,
+    "pct_from_52w_high": -1.7,
+    "pct_from_52w_low": 42.31
+   },
+   "momentum": {
+    "rsi14": 64.5,
+    "macd": 1.7,
+    "macd_signal": 1.48,
+    "macd_hist": 0.22,
+    "ret_5d_pct": 3.14,
+    "ret_20d_pct": 9.07,
+    "ret_60d_pct": 10.4
+   },
+   "volatility": {
+    "daily_vol_pct": 1.36,
+    "annual_vol_pct": 21.5,
+    "atr14": 1.86,
+    "atr14_pct": 1.94
+   },
+   "levels": {
+    "support": 90.58,
+    "resistance": null,
+    "high_20d": 97.39,
+    "low_20d": 87.39
+   },
+   "patterns": [
+    "within 2% of the 52-week high"
+   ],
+   "checklist": [
+    {
+     "signal": "Price above its 200-day average",
+     "state": true,
+     "vote": 1,
+     "detail": "95.73 vs 82.62"
+    },
+    {
+     "signal": "50-day average above the 200-day",
+     "state": true,
+     "vote": 1,
+     "detail": "89.81 vs 82.62"
+    },
+    {
+     "signal": "50-day average rising over the last month",
+     "state": true,
+     "vote": 1,
+     "detail": "+2.1%"
+    },
+    {
+     "signal": "MACD above its signal line",
+     "state": true,
+     "vote": 1,
+     "detail": "1.70 vs 1.48"
+    },
+    {
+     "signal": "RSI above 50",
+     "state": true,
+     "vote": 1,
+     "detail": "RSI 65"
+    },
+    {
+     "signal": "Up over the last 20 trading days",
+     "state": true,
+     "vote": 1,
+     "detail": "+9.1%"
+    },
+    {
+     "signal": "Closer to the 52-week high than the low",
+     "state": true,
+     "vote": 1,
+     "detail": "94% of the 52-week range"
+    }
+   ],
+   "score": 7,
+   "lean": "bullish",
+   "scenarios": {
+    "bear_p10": 88.58,
+    "inner_low": 90.1,
+    "base": 95.73,
+    "inner_high": 101.71,
+    "bull_p90": 103.46
+   },
+   "base_rate": {
+    "setup": "above 200-day, RSI high, MACD up",
+    "n": 208,
+    "median_pct": -0.01,
+    "pct_up": 50.0,
+    "p10_pct": -3.4,
+    "p90_pct": 5.66,
+    "uncond_n": 1035,
+    "uncond_median_pct": 0.64,
+    "uncond_pct_up": 56.0,
+    "years": 5.0
+   },
+   "read": "The Coca-Cola Company closed at 95.73 on 2026-11-05, -1.7% from its 52-week high. Trend: uptrend, with the price above the 200-day average and the 50-day rising over the past month. Momentum: RSI 65, MACD above its signal, +9.1% over 20 days. Nearest levels: support 90.58, resistance none in the last six months. Patterns: within 2% of the 52-week high. Over the next 20 trading days, ordinary volatility (1.4% a day) puts it between 88.58 and 103.46 eight times in ten. Base rate: in 5.0 years of history, this setup (above 200-day, RSI high, MACD up) came up 208 times and the price was higher 20 trading days later 50.0% of the time, median move -0.0%, against 56.0% for all days. Checklist 7 of 7 bullish: lean bullish. A lean is a description of the chart, not a forecast or a recommendation."
+  },
+  {
+   "symbol": "BAC",
+   "name": "Bank of America Corporation",
+   "currency": "USD",
+   "as_of": "2026-11-05",
+   "close": 49.76,
+   "live_price": 49.52,
+   "live_time": "2026-11-06T20:53:58+00:00",
+   "horizon_days": 20,
+   "target_date": "2026-12-03",
+   "trend": {
+    "label": "mixed",
+    "sma20": 51.22,
+    "sma50": 55.47,
+    "sma200": 54.91,
+    "sma50_slope_pct": -7.88,
+    "high_52w": 65.23,
+    "low_52w": 46.12,
+    "pct_from_52w_high": -23.72,
+    "pct_from_52w_low": 7.89
+   },
+   "momentum": {
+    "rsi14": 35.8,
+    "macd": -1.43,
+    "macd_signal": -1.647,
+    "macd_hist": 0.217,
+    "ret_5d_pct": -2.7,
+    "ret_20d_pct": -7.18,
+    "ret_60d_pct": -23.22
+   },
+   "volatility": {
+    "daily_vol_pct": 1.8,
+    "annual_vol_pct": 28.6,
+    "atr14": 1.49,
+    "atr14_pct": 2.99
+   },
+   "levels": {
+    "support": 49.26,
+    "resistance": 54.93,
+    "high_20d": 54.93,
+    "low_20d": 49.17
+   },
+   "patterns": [],
+   "checklist": [
+    {
+     "signal": "Price above its 200-day average",
+     "state": false,
+     "vote": -1,
+     "detail": "49.76 vs 54.91"
+    },
+    {
+     "signal": "50-day average above the 200-day",
+     "state": true,
+     "vote": 1,
+     "detail": "55.47 vs 54.91"
+    },
+    {
+     "signal": "50-day average rising over the last month",
+     "state": false,
+     "vote": -1,
+     "detail": "-7.9%"
+    },
+    {
+     "signal": "MACD above its signal line",
+     "state": true,
+     "vote": 1,
+     "detail": "-1.43 vs -1.65"
+    },
+    {
+     "signal": "RSI above 50",
+     "state": false,
+     "vote": -1,
+     "detail": "RSI 36"
+    },
+    {
+     "signal": "Up over the last 20 trading days",
+     "state": false,
+     "vote": -1,
+     "detail": "-7.2%"
+    },
+    {
+     "signal": "Closer to the 52-week high than the low",
+     "state": false,
+     "vote": -1,
+     "detail": "19% of the 52-week range"
+    }
+   ],
+   "score": -3,
+   "lean": "bearish",
+   "scenarios": {
+    "bear_p10": 44.87,
+    "inner_low": 45.9,
+    "base": 49.76,
+    "inner_high": 53.94,
+    "bull_p90": 55.18
+   },
+   "base_rate": {
+    "setup": "below 200-day, RSI low, MACD up",
+    "n": 17,
+    "median_pct": 1.54,
+    "pct_up": 59.0,
+    "p10_pct": -2.84,
+    "p90_pct": 13.1,
+    "uncond_n": 1035,
+    "uncond_median_pct": 1.52,
+    "uncond_pct_up": 57.0,
+    "years": 5.0
+   },
+   "read": "Bank of America Corporation closed at 49.76 on 2026-11-05, -23.7% from its 52-week high. Trend: mixed, with the price below the 200-day average and the 50-day falling over the past month. Momentum: RSI 36, MACD above its signal, -7.2% over 20 days. Nearest levels: support 49.26, resistance 54.93. Over the next 20 trading days, ordinary volatility (1.8% a day) puts it between 44.87 and 55.18 eight times in ten. Base rate: in 5.0 years of history, this setup (below 200-day, RSI low, MACD up) came up 17 times and the price was higher 20 trading days later 59.0% of the time, median move +1.5%, against 57.0% for all days. Checklist 2 of 7 bullish: lean bearish. A lean is a description of the chart, not a forecast or a recommendation."
+  },
+  {
+   "symbol": "BTC-USD",
+   "name": "Bitcoin USD",
+   "currency": "USD",
+   "as_of": "2026-11-05",
+   "close": 75942.125,
+   "live_price": 75753.66,
+   "live_time": "2026-11-06T20:55:12+00:00",
+   "horizon_days": 20,
+   "target_date": "2026-11-25",
+   "trend": {
+    "label": "uptrend",
+    "sma20": 79925.64,
+    "sma50": 81988.02,
+    "sma200": 73191.43,
+    "sma50_slope_pct": 0.91,
+    "high_52w": 107428.26,
+    "low_52w": 57747.77,
+    "pct_from_52w_high": -29.31,
+    "pct_from_52w_low": 31.51
+   },
+   "momentum": {
+    "rsi14": 38.5,
+    "macd": -1262.93,
+    "macd_signal": -998.529,
+    "macd_hist": -264.4,
+    "ret_5d_pct": -1.93,
+    "ret_20d_pct": -6.82,
+    "ret_60d_pct": -5.49
+   },
+   "volatility": {
+    "daily_vol_pct": 2.1,
+    "annual_vol_pct": 40.1,
+    "atr14": 2781.85,
+    "atr14_pct": 3.66
+   },
+   "levels": {
+    "support": 74944.59,
+    "resistance": 81346.95,
+    "high_20d": 84840.05,
+    "low_20d": 75114.29
+   },
+   "patterns": [],
+   "checklist": [
+    {
+     "signal": "Price above its 200-day average",
+     "state": true,
+     "vote": 1,
+     "detail": "75942.12 vs 73191.43"
+    },
+    {
+     "signal": "50-day average above the 200-day",
+     "state": true,
+     "vote": 1,
+     "detail": "81988.02 vs 73191.43"
+    },
+    {
+     "signal": "50-day average rising over the last month",
+     "state": true,
+     "vote": 1,
+     "detail": "+0.9%"
+    },
+    {
+     "signal": "MACD above its signal line",
+     "state": false,
+     "vote": -1,
+     "detail": "-1262.93 vs -998.53"
+    },
+    {
+     "signal": "RSI above 50",
+     "state": false,
+     "vote": -1,
+     "detail": "RSI 39"
+    },
+    {
+     "signal": "Up over the last 20 trading days",
+     "state": false,
+     "vote": -1,
+     "detail": "-6.8%"
+    },
+    {
+     "signal": "Closer to the 52-week high than the low",
+     "state": false,
+     "vote": -1,
+     "detail": "37% of the 52-week range"
+    }
+   ],
+   "score": -1,
+   "lean": "neutral",
+   "scenarios": {
+    "bear_p10": 67328.79,
+    "inner_low": 69133.49,
+    "base": 75942.12,
+    "inner_high": 83421.31,
+    "bull_p90": 85657.35
+   },
+   "base_rate": {
+    "setup": "above 200-day, RSI low, MACD down",
+    "n": 53,
+    "median_pct": 1.74,
+    "pct_up": 62.0,
+    "p10_pct": -9.84,
+    "p90_pct": 25.13,
+    "uncond_n": 1607,
+    "uncond_median_pct": 0.68,
+    "uncond_pct_up": 53.0,
+    "years": 5.0
+   },
+   "read": "Bitcoin USD closed at 75,942 on 2026-11-05, -29.3% from its 52-week high. Trend: uptrend, with the price above the 200-day average and the 50-day rising over the past month. Momentum: RSI 39, MACD below its signal, -6.8% over 20 days. Nearest levels: support 74,945, resistance 81,347. Over the next 20 trading days, ordinary volatility (2.1% a day) puts it between 67,329 and 85,657 eight times in ten. Base rate: in 5.0 years of history, this setup (above 200-day, RSI low, MACD down) came up 53 times and the price was higher 20 trading days later 62.0% of the time, median move +1.7%, against 53.0% for all days. Checklist 3 of 7 bullish: lean neutral. A lean is a description of the chart, not a forecast or a recommendation."
+  }
+ ],
+ "scores": [
+  {
+   "symbol": "AAPL",
+   "made": 1,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  },
+  {
+   "symbol": "AXP",
+   "made": 1,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  },
+  {
+   "symbol": "BAC",
+   "made": 1,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  },
+  {
+   "symbol": "BTC-USD",
+   "made": 1,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  },
+  {
+   "symbol": "GOOGL",
+   "made": 1,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  },
+  {
+   "symbol": "KO",
+   "made": 1,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  },
+  {
+   "symbol": "ALL",
+   "made": 6,
+   "resolved": 0,
+   "range_hits": 0,
+   "direction_calls": 0,
+   "direction_hits": 0
+  }
+ ]
+}

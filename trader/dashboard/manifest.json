@@ -1,5 +1,5 @@
 {
- "written_at": "2026-11-06T00:46:26Z",
+ "written_at": "2026-11-06T20:58:18Z",
  "files": [
   "holdings",
   "filing",
@@ -13,7 +13,11 @@
   "quarters",
   "shortlist",
   "news",
-  "congress"
+  "congress",
+  "reads",
+  "signals",
+  "candles",
+  "scores"
  ],
  "note": "Row files for the Berkshire Copycat dashboard. Ask Claude to refresh the dashboard and it uploads these."
 }
