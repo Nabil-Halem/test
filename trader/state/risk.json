@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-06",
+  "paper": true,
+  "results": [
+    {
+      "index": 1,
+      "symbol": "AAPL",
+      "side": "buy",
+      "amount": "$1,250",
+      "value_usd": 1250.0,
+      "fingerprint": "e28158d8be1ebf06",
+      "verdict": "PASS",
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "index": 2,
+      "symbol": "AXP",
+      "side": "buy",
+      "amount": "$1,119",
+      "value_usd": 1119.0,
+      "fingerprint": "8b3f7d1aeab89d95",
+      "verdict": "PASS",
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "index": 3,
+      "symbol": "GOOGL",
+      "side": "buy",
+      "amount": "$823",
+      "value_usd": 823.0,
+      "fingerprint": "647b3d8b498bbcd4",
+      "verdict": "PASS",
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "index": 4,
+      "symbol": "KO",
+      "side": "buy",
+      "amount": "$708",
+      "value_usd": 708.0,
+      "fingerprint": "cb5eb35cb0fcd66c",
+      "verdict": "PASS",
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "index": 5,
+      "symbol": "BAC",
+      "side": "buy",
+      "amount": "$600",
+      "value_usd": 600.0,
+      "fingerprint": "e74f14ff9221ca09",
+      "verdict": "PASS",
+      "reasons": [],
+      "warnings": []
+    }
+  ],
+  "pass": 5,
+  "block": 0,
+  "warnings": [],
+  "cash_after": 500.0,
+  "checked_at": "2026-11-06T00:08:05",
+  "orders_file": "trader/orders.json"
+}
